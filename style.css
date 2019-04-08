@@ -1,0 +1,41 @@
+body {
+	margin: auto 0;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	background-color: rgba(140, 0, 190, 0.5);
+	color: white;
+}
+
+/* NAVBAR */
+
+.list {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: space-between;
+	border: 2px solid black;
+	margin: 0;
+	background-color: rgba(240, 10, 10, 0.8);
+}
+
+.navBar {
+	padding: 2em 4em;
+	margin: auto 0;
+	line-height: 20px; 
+}
+
+.linkCol:visited {color: white;}
+.linkCol:link {color: white;}
+.linkCol:hover {color: blue;}
+
+/* MAIN BODY */
+
+.mainText {
+	padding: 0px 25px;
+	clear: both;
+}
+
+h1 {
+	text-decoration: underline;
+}
