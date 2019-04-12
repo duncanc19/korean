@@ -7,8 +7,11 @@ function prompting(word) {
 
 function wordCheck(word, englishWord) {
 	if (prompting(word) === englishWord) {
+		alert("That's correct! Well done!");
 		score += 1;
-	};
+	} else {
+		alert("Unlucky, it was " + englishWord)
+	}
 }
 
 wordCheck("동물", 'animal' || 'animals')
