@@ -1,5 +1,6 @@
 
 var score = 0;
+var maxScore = 0;
 
 function prompting(word) {
 	return prompt("Write the Korean word in English: " + word);
@@ -7,10 +8,13 @@ function prompting(word) {
 
 function wordCheck(word, englishWord) {
 	if (prompting(word) === englishWord) {
-		alert("That's correct! Well done!");
 		score += 1;
+		maxScore += 1;
+		alert("That's correct! Well done!\nScore: " + score + "/" + maxScore);
+		
 	} else {
-		alert("Unlucky, it was " + englishWord)
+		maxScore += 1;
+		alert("Unlucky, it was " + englishWord + "\nScore: " + score  + "/" + maxScore)
 	}
 }
 
@@ -28,5 +32,16 @@ wordCheck("기린", 'giraffe' || 'giraffes')
 wordCheck("염소", 'goat' || 'goats')
 wordCheck("사슴", 'deer')
 
+function result(comment) {
+	alert("You got " + score + "! " + comment + "!")
+}
 
-alert(score); 
+if (score === 13) {
+	result("You're incredible")
+} else if (score >= 10) {
+	result("Nice work")
+} else if (score >= 6) {
+	result("Not bad")
+} else if (score < 6) {
+	result("You need to work harder")
+}
