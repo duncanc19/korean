@@ -2,12 +2,14 @@
 var score = 0;
 var maxScore = 0;
 
+var translation;
 function prompting(word) {
-	return prompt("Write the Korean word in English: " + word);
+	translation = prompt("Write the Korean word in English: " + word);
+	return translation;
 }
 
 function wordCheck(word, englishWord, englishWord2) {
-	if (prompting(word) === englishWord || englishWord2) {
+	if (prompting(word) === englishWord || translation === englishWord2) {
 		score += 1;
 		maxScore += 1;
 		alert("That's correct! Well done!\nScore: " + score + "/" + maxScore);
